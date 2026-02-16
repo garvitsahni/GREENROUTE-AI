@@ -1,0 +1,7 @@
+timestamp,location_zone,congestion_level,average_speed_kmh
+2023-10-27 08:00:00,NYC_Midtown,High,12
+2023-10-27 08:00:00,NYC_Downtown,Severe,8
+2023-10-27 08:00:00,NJ_Turnpike,Moderate,65
+2023-10-27 09:00:00,NYC_Midtown,High,15
+2023-10-27 09:00:00,SF_BayBridge,High,25
+2023-10-27 09:00:00,CHI_Loop,Moderate,30

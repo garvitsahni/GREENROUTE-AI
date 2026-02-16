@@ -1,0 +1,16 @@
+vehicle_id,type,capacity,status
+V-101,Electric Van,50,Active
+V-102,Diesel Truck,200,Active
+V-103,Electric Van,50,Maintenance
+V-104,Hybrid Lorry,150,Active
+V-105,Electric Van,50,Active
+V-106,Diesel Truck,220,Active
+V-107,Drone Swarm,10,Testing
+V-108,Electric Scooter,5,Active
+V-109,Hybrid Lorry,160,Idle
+V-110,Diesel Truck,200,Repair
+V-111,Electric Van,55,Active
+V-112,Electric Van,50,Active
+V-113,Autonomous Pod,20,Testing
+V-114,Diesel Truck,180,Active
+V-115,Electric Truck,120,Active

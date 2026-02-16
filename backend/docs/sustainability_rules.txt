@@ -1,0 +1,6 @@
+GreenRoute Sustainability Guidelines:
+1. Always prioritize routes with lower carbon emissions, even if they add up to 15% to the delivery time.
+2. Electric vehicles (EVs) should be assigned to urban routes (<50km) to maximize battery efficiency.
+3. Diesel trucks should avoid city centers during peak hours (8am-10am, 4pm-6pm).
+4. A delay probability over 75% requires immediate rerouting to avoid idling emissions.
+5. Weather risks > 0.7 significantly increase fuel consumption due to wind resistance and traction loss.

@@ -1,0 +1,5 @@
+{
+  "name": "GreenRoute AI",
+  "description": "An intelligent logistics operating platform that predicts delivery delays, optimizes routes, assigns fleets, explains decisions using RAG, tracks carbon impact, and provides an AI agent for autonomous actions.",
+  "requestFramePermissions": []
+}

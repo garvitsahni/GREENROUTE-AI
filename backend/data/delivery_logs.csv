@@ -1,0 +1,11 @@
+log_id,timestamp,vehicle_id,route_id,status,delay_minutes,carbon_emitted_kg,customer_rating
+LOG-8001,2023-10-24 08:30:00,V-101,R-NY-01,Completed,0,2.1,5
+LOG-8002,2023-10-24 09:15:00,V-102,R-NY-02,Delayed,12,8.5,3
+LOG-8003,2023-10-24 10:00:00,V-105,R-CA-01,Completed,2,5.2,4
+LOG-8004,2023-10-24 11:30:00,V-104,R-TX-01,Rerouted,5,15.0,4
+LOG-8005,2023-10-24 13:45:00,V-101,R-NY-03,Completed,0,3.5,5
+LOG-8006,2023-10-25 08:00:00,V-106,R-WA-01,Delayed,45,12.0,2
+LOG-8007,2023-10-25 09:30:00,V-108,R-IL-01,Completed,0,0.5,5
+LOG-8008,2023-10-25 14:20:00,V-102,R-NY-02,Completed,0,8.2,5
+LOG-8009,2023-10-26 10:10:00,V-111,R-CA-02,Completed,0,6.8,5
+LOG-8010,2023-10-26 16:50:00,V-104,R-TX-01,Delayed,20,18.5,3

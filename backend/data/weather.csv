@@ -1,0 +1,6 @@
+timestamp,region,condition,precipitation_mm,wind_speed_kmh,visibility_km
+2023-10-27 08:00:00,NYC,Rain,5.2,15,8
+2023-10-27 08:00:00,SFO,Fog,0.1,10,0.5
+2023-10-27 08:00:00,CHI,Clear,0.0,25,10
+2023-10-27 08:00:00,ATX,Sunny,0.0,5,15
+2023-10-27 12:00:00,NYC,Cloudy,0.0,12,10
