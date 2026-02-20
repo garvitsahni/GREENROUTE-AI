@@ -1,3 +1,4 @@
+
 export interface RouteOption {
   id: string;
   name: string;
@@ -38,4 +39,15 @@ export interface SimulationStatus {
 export interface VoiceResponse {
   answer: string;
   audio_url?: string; // Placeholder for future TTS
+}
+
+export interface DeliveryLog {
+  log_id: string;
+  timestamp: string;
+  vehicle_id: string;
+  route_id: string;
+  status: string;
+  delay_minutes: number;
+  carbon_emitted_kg: number;
+  customer_rating: number;
 }

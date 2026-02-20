@@ -1,4 +1,4 @@
-import { OptimizationResult, SimulationStatus, Vehicle, VoiceResponse } from '../types';
+import { OptimizationResult, SimulationStatus, Vehicle, VoiceResponse, DeliveryLog } from '../types';
 
 // Standard localhost development URL. 
 const API_BASE = 'http://localhost:8000';
@@ -72,6 +72,29 @@ export const addVehicle = async (vehicle: Omit<Vehicle, 'assigned_orders'>): Pro
   } catch (e) {
     handleFetchError(e, '/fleet/add');
     throw e;
+  }
+};
+
+export const fetchHistory = async (): Promise<DeliveryLog[]> => {
+  try {
+    const res = await fetch(`${API_BASE}/history?t=${Date.now()}`);
+    if (!res.ok) throw new Error('Failed to fetch history');
+    return res.json();
+  } catch (e) {
+    handleFetchError(e, '/history');
+    throw e;
+  }
+};
+
+export const fetchLogExplanation = async (logId: string): Promise<string> => {
+  try {
+    const res = await fetch(`${API_BASE}/history/explain?log_id=${logId}`);
+    if (!res.ok) throw new Error('Failed to fetch explanation');
+    const data = await res.json();
+    return data.explanation;
+  } catch (e) {
+    console.error(e);
+    return "Analysis unavailable.";
   }
 };
 

@@ -4,44 +4,45 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>GreenRoute AI</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'brand-dark': '#0f172a',
-              'brand-green': '#10b981',
-              'brand-accent': '#3b82f6',
-            }
-          }
-        }
-      }
-    </script>
     <style>
       /* Custom scrollbar for aesthetic consistency */
       ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+        width: 6px;
+        height: 6px;
       }
       ::-webkit-scrollbar-track {
-        background: #1e293b;
+        background: #050505;
       }
       ::-webkit-scrollbar-thumb {
-        background: #475569;
-        border-radius: 4px;
+        background: #333;
+        border-radius: 3px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #64748b;
+        background: #555;
       }
       .leaflet-container {
-        background: #1e293b;
+        background: #050505;
+        font-family: 'Inter', sans-serif;
+      }
+      .leaflet-tooltip {
+        background: rgba(10, 10, 10, 0.9) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        color: #fff !important;
+        border-radius: 8px !important;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3) !important;
+        backdrop-filter: blur(8px);
+      }
+      .leaflet-tooltip-top:before, .leaflet-tooltip-bottom:before, .leaflet-tooltip-left:before, .leaflet-tooltip-right:before {
+        border-top-color: rgba(10, 10, 10, 0.9) !important;
       }
     </style>
   <script type="importmap">
@@ -54,9 +55,10 @@
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-brand-dark text-slate-200 antialiased overflow-hidden">
+  <body class="bg-[#050505] text-stone-200 antialiased overflow-hidden selection:bg-emerald-500/30">
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
-  </body>
+</body>
 </html>

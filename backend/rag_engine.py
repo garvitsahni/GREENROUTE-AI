@@ -97,3 +97,28 @@ def get_voice_answer(question):
         return response.text
     except Exception as e:
         return "I could not process that request."
+
+def get_historical_explanation(log_entry):
+    """Generates an analysis for a past delivery log."""
+    if not HAS_GENAI or not api_key:
+        return f"Analysis for Log {log_entry.get('log_id')}: AI features offline."
+
+    try:
+        prompt = f"""
+        Analyze this historical delivery log as a logistics expert:
+        
+        Log ID: {log_entry.get('log_id')}
+        Route: {log_entry.get('route_id')}
+        Vehicle: {log_entry.get('vehicle_id')}
+        Status: {log_entry.get('status')}
+        Delay: {log_entry.get('delay_minutes')} minutes
+        Emissions: {log_entry.get('carbon_emitted_kg')} kg
+        Customer Rating: {log_entry.get('customer_rating')}/5
+
+        Provide a concise (2 sentences max) explanation of why this outcome occurred (e.g., relating emissions to vehicle type, or delay to route) and if it met sustainability goals.
+        """
+        model = genai.GenerativeModel('gemini-1.5-flash')
+        response = model.generate_content(prompt)
+        return response.text.strip()
+    except Exception as e:
+        return f"Could not generate historical analysis: {str(e)}"
